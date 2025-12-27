@@ -1,1 +1,18 @@
+n, k = map(int, input().split())
+arr = list(map(int, input().split()))
 
+current_sum = 0
+start = 0
+
+for end in range(n):
+    current_sum += arr[end]
+
+    while current_sum > k and start <= end:
+        current_sum -= arr[start]
+        start += 1
+
+    if current_sum == k:
+        print(start, end)
+        break
+else:
+    print(-1, -1)
