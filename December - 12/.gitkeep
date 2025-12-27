@@ -1,1 +1,24 @@
+n = int(input())
+arr = list(map(int, input().split()))
 
+# Expected sums
+S = n * (n + 1) // 2
+S2 = n * (n + 1) * (2*n + 1) // 6
+
+# Actual sums
+A = sum(arr)
+A2 = sum(x*x for x in arr)
+
+# Differences
+diff = S - A          # M - D
+diff2 = S2 - A2       # M^2 - D^2
+
+# M + D
+sum_md = diff2 // diff
+
+# Solve
+missing = (diff + sum_md) // 2
+duplicate = missing - diff
+
+print("Missing Number:", missing)
+print("Duplicate Number:", duplicate)
