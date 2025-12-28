@@ -1,4 +1,4 @@
-# A-December-of-Algorithms-2025
+## A-December-of-Algorithms-2025
 
 <div align="left">
 <h1>
